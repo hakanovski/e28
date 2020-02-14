@@ -78,10 +78,6 @@ section {
     align-items: center;
 }
 
-/* Turning hand rock to opposite side */
-.player-hand{
-    transform: rotateY(180deg);
-}
 
 /* Creating button click effects */
 div.fadeOut{
