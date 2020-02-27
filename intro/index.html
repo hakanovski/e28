@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Week 3 - Vue.js Intro</title>
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src='script.js' defer></script>
+    
+
+</head>
+
+<body>
+    
+    <!-- v-cloak directive ini kullanarak, sayfayi reload yaptigimizdaki o unrendered contenti yok ediyoruz. Saniyelik bir goruntu, onu yok ediyoruz. Unutursan bunu. week 3 part 2'de 32:30'daki anlatilana bak. Not kisminda Cloaking'de de gorebilirsin. Yukarda bir de internally css kodunu ekliyoruz style tag i icinde. Refresh yapinca o garip 1 saniyelik seyi gormuyoruz boylece -->
+    <div id='app' v-cloak>
+        <!-- Player a isim girmesini istiyoruz label yaratarak -->
+        <label>What's your name?
+             <!-- Directive ilan ediyoruz yani "v-model". V-MODEL bir giriyi applicationdaki data model ile bind ediyor. Bu durumda biz playerName ile bind etmesini istiyoruz. Kutunun icine istedigin ismi yaz disindaki output da o oluyor. -->
+            <input type='text' v-model='playerName'>
+        </label>
+        <!-- String interpolation yaparak script de ilan ettigimiz playerName ile baglanti kuruyoruz. -->
+        <!-- Burda da v-if directive ini ilan ediyoruz (conditional) -->
+        <p v-if='playerName != ""'>
+           Player: {{ playerName }}
+        </p>
+
+
+        <!-- Bir baska ornek yapalim, burda da v-on directive ini yapiyoruz. Syi tahmin etmw oyunu yapiyoruz -->
+        <label>Enter your guess:
+            <input type='text' v-model='guess'>
+        </label>
+        <!-- "push" is an array manipulator -->
+        <!-- Kutunun icine sayi yazinca inspector a bak. Sayiyi yazip guess butonauna tikladiktan sonra vue plugin icinde refresh e bas. Arraty in icine koyuyor teker teker girilen rakamlari. Guess i aguman olarak yazmamizin sebei de bu -->
+        <!-- Bir baska onemli point ise bazi directiveler argument kabul ederler. Mesela asagidaki v-on directive i click argumanini kabul ediyor. -->
+        <button v-on:click='guesses.push(guess)'>Guess</button>
+
+        <!-- Each guess icin bir liste olusturucaz ve "v-for" directive ini kullanicaz iyerate yapmak icin-->
+        <ul>
+            <!-- script file inda yarattigimiz guesses adli arrayin icinde loop yapmak istiyoruz iterationumuzu -- iteration derken yani gitilen sayilari alt alta dizme ve sonra thisGuess string interpolation yapiyoruz bag kurmak icin -->
+            <li v-for='thisGuess in guesses'>{{ thisGuess }}</li>
+        </ul>
+        
+    </div>
+
+</body>
+
+
+
+
+</html>

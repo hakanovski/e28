@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping List</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src='../shopping-list/script.js' defer></script>
+    <style>
+        [v-cloak] {
+            display: none
+        }
+
+        .no-items {
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+
+
+ <body>
+  <div id='app' v-cloak> 
+
+
+   <h1>Shopping List</h1>
+   
+   <!-- Shopping liste e malzeme ekleyip asagida gormek istiyoruz add e bastiktan sonra.
+   Bu yuzden vue.js de data nin altina hangi malzeme girilecegini belirttik newItems ile ve ayni zamanda asagida liste olusturmak icin array yarattik items ile. Simdi asagidaki input type text ve Add butonu ile vue.js fileindaki newItem ve items lari bind ediyoruz "v-model" option API ile -->
+   <label>Item: <input type='text' v-model='newItem'></label>
+   <!-- .push(newItem) kullaniyoruz cunku new itemdan aldigimiz bilgiyi add butonu ile arrayin icine push ediyoruz. -->
+   <!-- Item ekledikten sonraki anda haveItems i true yapiyoruz. -->
+   <button v-on:click='items.push(newItem); haveItems = true'>Add</button>
+
+   <!-- Simdi shopping liste bisey ekleyip add yapinca asagida gosteriyor fakat, there is no items on your list in degismesi lazim bisey ekledikten sonra bunun icin Conditional Rendering yapiyoruz v-if ile. Yukarida haveItems :true dedik ya, eger bisey eklendiyse bu "You have no items on your list" promptunu gosterme diyoruz basina unlem koyarak haveItems in -->
+   <div class='no-items' v-if='!haveItems'>
+    You have no items on your list.
+   </div>
+
+   <div>
+       <!-- Buraya da sepete kac tane item ekledigimizi yaziyoruz string interpolation ile -->
+      <p>
+          Item count:{{ items.length }}
+      </p>
+
+      <ul>
+          <!-- Add e tikladiktan sonra asagiya liste olarak yazdirmasini istiyoruz alinacaklar listesinin
+          Bunun icin list rendering yapmamiz lazim v-for option API yi yani directive i ile sonra da string interpolation yapiyoruz bindlamak icin. -->
+          <li v-for='thisItem in items'>{{ thisItem }}</li>
+      </ul>
+   </div>
+  </div>
+ </body>
+</html>
