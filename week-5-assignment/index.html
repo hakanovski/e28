@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Word Scramble Game </title>
+
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js' defer></script>
+    <script src='script.js' defer></script>
+</head>
+
+
+<!-- CSS Part -->
+
+<style>
+
+    #mysteryWord {
+        font-size: 18px;
+        font-family: sans-serif;
+    }
+
+    .winning_game {
+        background-color: green;
+    }
+    
+    .loosing_game {
+        background-color: red;
+    }
+
+    #result {
+        font-family: sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        padding: 10px;
+        margin-top: 10px;
+        color: white;
+    }
+     
+    /* For preventing the quick visual glitch after refreshing the page */
+    [v-cloak] {
+        display: none;
+    }
+
+</style>
+
+<body>
+
+    <h1> Word Scramble </h1>
+    <!-- Using v-cloak for hiding any action on the launch screen -->
+    <div id='app' v-cloak>
+    <!-- Creating the Intro of the game    -->
+    <div v-if='type == "begin"'>
+            <label v-for='playerName'>Enter your name: </label>
+            <input v-type='text' id='playerName' v-model='playerName'>
+            <button @click='launchGame'>Lets play!</button>
+    </div>
+        
+    <!-- Creating the main game screen -->
+    <div v-if='type == "activeGame"'>
+            <!-- With string interpolation I am transferring the name that previously entered to here -->
+            <p>Game on, {{ playerName }}!</p>
+            <p id="mysteryWord">Your mystery word is: {{ scrambledWord }}</p>
+            <!-- With string interpolation I am reflecting the matching hint array members to here -->
+            <p>Hint: <i> {{ hint }} </i></p>
+
+            <!-- Actions after making a guess PART 1 -->
+            <label v-for='makingGuess'>Your guess: </label>
+            <input v-type='text' v-model='makingGuess'>
+            <button @click='submitGuess' v-model='makingGuess'>Submit Guess</button>
+    </div>
+
+    <!-- Actions and conditional rendering after making a correct or false guess  -->
+    <div v-if='result' id='result' :class="{'winning_game': correct, 'loosing_game': correct === false}">
+            <div v-if='correct'>You got it! Nice work. 
+                <!-- Putting play again inside correct answer's green box -->
+                <button @click='restartGame'>Play again</button>
+            </div>
+            <!-- Wrong answer -->
+            <div v-else>Sorry, that’s not correct. Please try again.</div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
