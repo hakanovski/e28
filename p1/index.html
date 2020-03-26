@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rock Paper and Scissors</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <h1> Rock - Paper - Scissors</h1>
+
+    <div id="app" v-cloak>
+        
+        <player-weapon v-if="!winner" :player-weapon="playerWeapon" v-on:choose="activatePlayerWeapon($event)"
+        v-on:fire="fireNow()">
+        </player-weapon>
+        
+        <round-details v-else :player-weapon="playerWeapon" :computer-weapon="computerWeapon"
+        :winner="winner" v-on:new-round="newRound()">
+        </round-details>
+        
+        <score-history :player-score="playerScore" :computer-score="computerScore" :history="history"
+        v-on:deleting-all="deleteAll()">
+        </score-history>
+        
+    </div>
+</body>
+
+</html>
