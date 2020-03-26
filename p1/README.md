@@ -13,12 +13,12 @@
 - Components (https://vuejs.org/v2/guide/components-custom-events.html)
 - Codepen (https://codepen.io/pietrofxq/details/sHalI)
 - Codepen 2 (https://codepen.io/AMilburn/details/RWrPKx)
-- Generating_Random_Number (https://www.tutorialsplane.com/vue-js-generate-random-number-2/)
-- Components_Basics (https://vuejs.org/v2/guide/components.html)
+- Generating Random Number (https://www.tutorialsplane.com/vue-js-generate-random-number-2/)
+- Components Basics (https://vuejs.org/v2/guide/components.html)
 - Props (https://michaelnthiessen.com/vue-props-ultimate-guide)
 
 ### CSS:
-- Flex_Direction (https://css-tricks.com/almanac/properties/f/flex-direction/)
+- Flex Direction (https://css-tricks.com/almanac/properties/f/flex-direction/)
 - Flex Direction 2 (https://www.w3schools.com/cssref/css3_pr_flex-direction.asp)
 - CSS Effects (https://www.w3schools.com/howto/howto_css_shake_image.asp)
 
