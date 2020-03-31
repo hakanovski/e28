@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 200%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-gap: 2rem;
+  justify-content: center;
+}
+
+div {
+  border: 5px solid black;
+}
+
+p {
+  text-align: center;
+}

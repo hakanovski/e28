@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 150%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+}
+
+.main-color {
+  background-color: #98d12e;
+}
+
+.complementary-color {
+  background-color: #7252ad;
+}
+
+.analogous-color {
+  background-color: #527ead;
+}
+
+.analogous-color {
+  background-color: #527ead;
+}

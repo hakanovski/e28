@@ -1,0 +1,62 @@
+
+/* Flexbox is starting from here */
+body {
+  display: flex;
+  min-height: 100px;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, Geneva, sans-serif;
+  background-color: black;
+}
+
+/* Mobile landscape mode */
+  @media only screen and (min-width: 480px)  {
+    #page-wrapper {
+        display: flex;
+        flex: 1;
+      }
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+header, footer {
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  font-size: 2rem;
+  background-color: coral;
+  height: auto;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  font-size: 2rem;
+}
+
+nav {
+  flex: 0 0 20%;
+  padding: 1em;
+  background-color: lightblue;
+}
+
+
+.content {
+  flex:1;
+  background-color: orange;
+  padding: 1em;
+}
+
+footer {
+  align-self: flex-end;
+}
+
+header, footer, article, nav {
+    padding: 1em;
+  }
+}
+

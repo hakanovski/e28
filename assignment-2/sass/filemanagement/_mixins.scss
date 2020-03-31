@@ -1,0 +1,22 @@
+
+
+/* Painter Info Styling -- Orange & Red */
+
+// MIXIN -- Creating mixin in h1, h4 for color, font weight, family and style.
+@mixin painter-info {
+    color: black;
+    font-weight: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+h1, h4 {
+    @include painter-info;
+    background-color: $red-color;    
+}
+
+h3, h5 {
+    background-color: $main-color;
+}
+
+

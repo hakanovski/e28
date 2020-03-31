@@ -1,0 +1,129 @@
+/* Creating Rothko Painting -- ORANGE & RED */
+.content #yellow {
+  background-color: #fab205;
+  width: 320px;
+  height: 167px;
+  box-shadow: 0 0 8px 3px #db6702 inset;
+  margin-left: 1.2rem;
+  margin-top: -27.8rem;
+  margin-bottom: 0.4rem;
+}
+.content #Background {
+  background-color: #db6702;
+  width: 360px;
+  height: 462.2px;
+}
+.content #red {
+  background-color: #d43f0a;
+  width: 325px;
+  height: 240.7px;
+  box-shadow: 0 0 6px 6px #e17305 inset;
+  margin-left: 1.1rem;
+  margin-top: -15.7rem;
+  margin-bottom: 2rem;
+}
+.content #yellow2 {
+  background-color: #e17305;
+  width: 350px;
+  height: 265.7px;
+  box-shadow: 0 0 8px 8px #db6702 inset;
+  margin-left: 0.3rem;
+}
+
+/* Painter Info Styling -- Orange & Red */
+h1, h4 {
+  color: black;
+  font-weight: normal;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  background-color: #de420a;
+}
+
+h3, h5 {
+  background-color: #db6702;
+}
+
+/* Flexbox is starting from here */
+body {
+  display: flex;
+  min-height: 100px;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, Geneva, sans-serif;
+  background-color: black;
+}
+
+/* Mobile landscape mode */
+@media only screen and (min-width: 480px) {
+  #page-wrapper {
+    display: flex;
+    flex: 1;
+  }
+
+  .page-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  header, footer {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    font-size: 2rem;
+    background-color: coral;
+    height: auto;
+  }
+
+  .main {
+    display: flex;
+    height: 100%;
+    font-size: 2rem;
+  }
+
+  nav {
+    flex: 0 0 20%;
+    padding: 1em;
+    background-color: lightblue;
+  }
+
+  .content {
+    flex: 1;
+    background-color: orange;
+    padding: 1em;
+  }
+
+  footer {
+    align-self: flex-end;
+  }
+
+  header, footer, article, nav {
+    padding: 1em;
+  }
+}
+/* Flexbox is starting from here */
+body {
+  display: flex;
+  min-height: 100px;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, Geneva, sans-serif;
+  background-color: black;
+}
+
+/* Desktop Screen Sizes */
+@media only screen and (min-width: 768px) {
+  #page-wrapper > article {
+    grid-column: span 3;
+  }
+
+  #page-wrapper > header,
+#page-wrapper > footer {
+    grid-column: auto;
+  }
+
+  #page-wrapper > nav {
+    grid-column: span 2;
+  }
+}

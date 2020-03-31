@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 200%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-gap: 2rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+div {
+  border: 1px solid #2b2b2b; }
+
+p {
+  text-align: center; }
+
+.primary-color {
+  background-color: #d65a29;
+  color: #fcf9f8; }
+
+.complementary-color {
+  background-color: #3b9dc4;
+  color: #fcf9f8; }
+
+.analogous-color {
+  background-color: #3bc490;
+  color: #fcf9f8; }
+
+.complementary-analogous {
+  background-color: #3bb7a1;
+  color: #fcf9f8; }
+
+.complementary-neutral {
+  background-color: #5b8fa4;
+  color: #fcf9f8; }
+
+.complementary-neutral-light {
+  background-color: #c7d9e0;
+  color: #2b2b2b; }
+
+.complementary-neutral-dark {
+  background-color: #1f3138;
+  color: #fcf9f8; }
+
+.primary-neutral {
+  background-color: #ae6b51;
+  color: #fcf9f8; }
+
+.primary-neutral-light {
+  background-color: #e3cdc4;
+  color: #2b2b2b; }
+
+.primary-neutral-dark {
+  background-color: #3b241c;
+  color: #fcf9f8; }
+
+.primary-light {
+  background-color: #dc8e6f;
+  color: #2b2b2b; }
+
+.primary-dark {
+  background-color: #904223;
+  color: #fcf9f8; }
+
+.complementary-light {
+  background-color: #7ab8d1;
+  color: #2b2b2b; }
+
+.white {
+  background-color: #fcf9f8;
+  color: #2b2b2b; }
+
+.neutral-gray {
+  background-color: gray;
+  color: #fcf9f8; }
+
+.primary-gray {
+  background-color: #6a8996;
+  color: #2b2b2b; }
+
+.complementary-gray {
+  background-color: #74848b;
+  color: #fcf9f8; }
+
+.black {
+  background-color: #2b2b2b;
+  color: #fcf9f8; }
+
+.analogous-color {
+  background-color: #3bc490;
+  color: #fcf9f8; }
+
+.complementary-analogous {
+  background-color: #3bb7a1;
+  color: #fcf9f8; }

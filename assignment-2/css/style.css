@@ -1,0 +1,318 @@
+:root {
+  --button-size: 1rem;
+  --long_painting: 30em;
+}
+
+button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin-right: 2rem;
+  font-size: var(--button-size);
+}
+
+button:hover {
+  background-color: #006700;
+}
+
+nav ul button {
+  min-height: var(--long_painting);
+}
+
+@media (min-width: 550px) {
+  :root {
+    --button-size: 1.5rem;
+  }
+}
+@media (min-width: 800px) {
+  :root {
+    --button-size: 2rem;
+  }
+}
+@media (max-height: 20px) {
+  :root {
+    --long_painting: 30em;
+  }
+}
+/* Creating custom property and using calc */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  --columns: 12;
+}
+
+.column {
+  flex-basis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+}
+
+header {
+  --width: 12;
+}
+
+@media (min-width: 400px) {
+  header {
+    --width: 8;
+  }
+}
+@media (min-width: 800px) {
+  header {
+    --width: 10;
+  }
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Flexbox is starting from here */
+body {
+  display: flex;
+  min-height: 100px;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Kreon", serif;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #1d1b1b;
+  background-color: black;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+h1, q, h2, h3, h4, h5 {
+  margin: 2.15rem 0 1rem;
+  font-family: "Walter Turncoat", cursive;
+  font-weight: 200;
+  line-height: 1.15;
+}
+
+:root {
+  --base-size: 1em;
+  --type-scale: 1.333;
+  --quote-text-size: 1.777;
+  --h5: calc(var(--base-size) * var(--type-scale));
+  --h4: calc(var(--h5) * var(--type-scale));
+  --h3: calc(var(--h4) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+}
+
+h1, q {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+p {
+  font-size: var(--base-size);
+}
+
+.smallest_text {
+  font-size: calc(var(--quote-text-size) - var(--type-scale));
+}
+
+@media (min-width: 400px) {
+  :root {
+    --type-scale: 1;
+  }
+}
+@media (min-width: 800px) {
+  :root {
+    --type-scale: 1.25;
+  }
+}
+footer {
+  height: calc(3em + 5px);
+  width: calc(3em + 1200px);
+  background: #e53b2c;
+  text-align: center;
+  font-size: 2rem;
+}
+
+footer > p {
+  color: #0035a7;
+  font-size: 1.5rem;
+  font-family: "Kreon", serif;
+}
+
+/* Mobile landscape mode */
+@media only screen and (min-width: 480px) {
+  #page-wrapper {
+    display: flex;
+    flex: 1;
+  }
+
+  .page-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    font-size: 2rem;
+    background-color: coral;
+    height: auto;
+  }
+
+  .main {
+    display: flex;
+    height: 100%;
+    font-size: 2rem;
+  }
+
+  nav {
+    flex: 0 0 20%;
+    padding: 1em;
+    background-color: lightblue;
+  }
+
+  .content {
+    flex: 1;
+    background-color: orange;
+    padding: 1em;
+  }
+
+  footer {
+    align-self: flex-end;
+  }
+
+  header, footer, article, nav {
+    padding: 1em;
+  }
+}
+/* Desktop Screen Sizes */
+@media only screen and (min-width: 768px) {
+  #page-wrapper > article {
+    grid-column: span 3;
+  }
+
+  #page-wrapper > header,
+#page-wrapper > footer {
+    grid-column: auto;
+  }
+
+  #page-wrapper > nav {
+    grid-column: span 2;
+  }
+}
+/* Creating Rothko Painting -- ORANGE & RED */
+.content #yellow {
+  background-color: #fab205;
+  width: 320px;
+  height: 167px;
+  box-shadow: 0 0 8px 3px #db6702 inset;
+  margin-left: 1.2rem;
+  margin-top: -27.8rem;
+  margin-bottom: 0.4rem;
+}
+.content #Background {
+  background-color: #db6702;
+  width: 360px;
+  height: 462.2px;
+}
+.content #red {
+  background-color: #d43f0a;
+  width: 325px;
+  height: 240.7px;
+  box-shadow: 0 0 6px 6px #e17305 inset;
+  margin-left: 1.1rem;
+  margin-top: -15.7rem;
+  margin-bottom: 2rem;
+}
+.content #yellow2 {
+  background-color: #e17305;
+  width: 350px;
+  height: 265.7px;
+  box-shadow: 0 0 8px 8px #db6702 inset;
+  margin-left: 0.3rem;
+}
+
+/* Painter Info Styling -- Orange & Red */
+h1, q, h4 {
+  color: black;
+  font-weight: normal;
+  
+  font-style: italic;
+  background-color: #de420a;
+  font-family: "Kreon", serif;
+}
+
+h3, h5 {
+  background-color: #db6702;
+}
+
+/* Painter Info Styling Blue & Grey */
+q {
+  background-color: #3464ca;
+}
+
+header > h2 {
+  color: black;
+}
+
+/* Navigation Part Styling */
+nav ul li {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  padding-left: 10px;
+  border: thin groove #f2f2f2;
+  font-weight: bold;
+  background: #09a066;
+  color: #ffdb58;
+  font-family: "Walter Turncoat", cursive;
+}
+nav ul li:hover {
+  color: tomato;
+  transform: skewX(-15deg) scale(1.2);
+  border-color: #DD0000;
+  background: linear-gradient(to bottom, #13ff89 0%, #1F1C18 100%);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+li {
+  list-style: none;
+  margin: 2px;
+  display: block;
+  border: solid 5px;
+}
+
+@media (min-width: 700px) {
+  article {
+    background-color: #96ee09;
+  }
+}
+@media (min-width: 1000px) {
+  article {
+    background-color: #cfbc4d;
+  }
+}

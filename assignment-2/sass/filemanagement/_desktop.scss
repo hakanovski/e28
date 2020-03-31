@@ -1,0 +1,28 @@
+
+
+/* Flexbox is starting from here */
+body {
+   display: flex;
+   min-height: 100px;
+   flex-direction: column;
+   margin: 0;
+   font-family: Arial, Geneva, sans-serif;
+   background-color: black;
+ }
+
+/* Desktop Screen Sizes */
+@media only screen and (min-width: 768px) {
+ #page-wrapper > article{
+    grid-column: span 3;
+ }
+
+ #page-wrapper > header, 
+ #page-wrapper > footer {
+    grid-column: auto;
+ }
+
+ #page-wrapper > nav {
+     grid-column: span 2;
+ }
+}
+

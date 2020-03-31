@@ -1,0 +1,399 @@
+
+
+// Declaring a variable for effecting footer with calc function (Outside Media Query Variables)
+$stinky-footer: 3em;
+$designer-hakan: #0035a7;
+
+
+// Declaring a variable for setting up invert color (media query without min, max-width) of Navigation menu painting
+$rothko_long : 30em;
+
+// Declaring variables for More Rothko Button:
+$button-sm: 1rem;
+$button-md: 1.5rem;
+$button-lg: 2rem;
+
+:root {
+  --button-size: #{$button-sm};
+  --long_painting: #{$rothko_long};
+}
+
+button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin-right: 2rem;
+  font-size: var(--button-size);
+}
+
+button:hover {
+  background-color: darken(green, 5%);
+}
+
+nav ul button {
+  min-height:  var(--long_painting);
+}
+
+// Media Query for More Rothko Button
+@media (min-width: 550px) {
+  :root {
+    --button-size: #{$button-md};
+  }
+}
+@media (min-width: 800px) {
+    :root {
+      --button-size: #{$button-lg};
+  }
+}
+
+// Media Query for Long Rothko Painting
+@media (max-height: 20px) {
+  :root {
+    --long_painting: #{$rothko_long};
+  }
+}
+ 
+
+
+/* Creating custom property and using calc */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  --columns: 12;
+}
+
+.column {
+  flex-basis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+}
+
+header{
+  --width: 12;
+}
+
+@media (min-width: 400px) {
+	header {
+    --width: 8;
+	}
+}
+
+@media (min-width: 800px) {
+	header {
+		--width: 10;
+  }
+}
+
+
+// Declaring variables for Rothko Painting --  ORANGE & RED
+$red-color: #de420a;
+$yellow-color: #fab205;
+$main-color: #db6702;
+
+// // Declaring variables for Rothko Painting --  BLUE & GREY
+// $dark-grey: #3b3d42;
+// $dirty-white: #d4d6db;
+// $navyish: #091942;
+
+// Declaring a variable for darken function's percentage argument
+$amount: 2%;
+
+//Declaring a variable for header to create if/else statement
+$rothko: 5;
+
+// Using Math for the width of Rothko Painting
+$updated-width: 10;
+
+// Using Math for the height of Rothko Painting
+$updated-height: 20;
+
+html {
+    box-sizing: border-box; 
+  }
+
+  *, 
+  *:before, 
+  *:after {
+    box-sizing: inherit;
+  }
+
+/* Flexbox is starting from here */
+// Typography Section
+body {
+    display: flex;
+    min-height: 100px;
+    flex-direction: column;
+    margin: 0;
+    // I used Kreon - https://fonts.google.com/specimen/Kreon
+    font-family: 'Kreon', serif;
+    font-weight: 400;
+    line-height: 1.15;
+    color: rgb(29, 27, 27);
+    background-color: black; 
+}
+
+p {margin-bottom: 1.50em;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.15rem 0 1rem;
+  // I used Walter Turncoat - https://fonts.google.com/specimen/Walter+Turncoat?selection.family=Walter+Turncoat
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: 200;
+  line-height: 1.15;
+}
+
+:root {
+  --base-size: 1em;
+  --type-scale: 1.333;
+  --quote-text-size: 1.777;
+  --h5: calc(var(--base-size) * var(--type-scale));
+  --h4: calc(var(--h5) * var(--type-scale));
+  --h3: calc(var(--h4) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+}
+
+h1 {font-size: var(--h1);}
+h2 {font-size: var(--h2);}
+h3 {font-size: var(--h3);}
+h4 {font-size: var(--h4);}
+h5 {font-size: var(--h5);}
+
+p {font-size: var(--base-size);}
+
+.smallest_text {font-size: calc(var(--quote-text-size) - var(--type-scale));}
+
+
+@media (min-width: 400px) {
+  :root {
+    --type-scale: 1;
+  }
+}
+@media (min-width: 800px) {
+  :root {
+    --type-scale: 1.25;
+  }
+}
+
+
+
+
+// Using calc to reshape the size of the footer
+footer {
+  height: calc(#{$stinky-footer} + 5px);
+  width: calc(#{$stinky-footer} + 1200px);
+  background: #e53b2c;
+  text-align: center;
+  font-size: 2rem;
+}
+
+footer > p{
+   color: $designer-hakan;
+  // calling button's variable for applying same size
+   font-size: $button-md;
+   font-family: 'Kreon', serif;
+}
+
+/* Mobile landscape mode */
+  @media only screen and (min-width: 480px)  {
+    #page-wrapper {
+        display: flex;
+        flex: 1;
+      }
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+header{
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  font-size: 2rem;
+  background-color: coral;
+  height: auto;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  font-size: 2rem;
+}
+
+nav {
+  flex: 0 0 20%;
+  padding: 1em;
+  background-color: lightblue;
+}
+
+
+.content {
+  flex:1;
+  background-color: orange;
+  padding: 1em;
+}
+
+footer {
+  align-self: flex-end;
+
+}
+
+header, footer, article, nav {
+    padding: 1em;
+  }
+}
+
+/* Desktop Screen Sizes */
+@media only screen and (min-width: 768px) {
+ #page-wrapper > article{
+    grid-column: span 3;
+ }
+
+ #page-wrapper > header, 
+ #page-wrapper > footer {
+    grid-column: auto;
+ }
+
+ #page-wrapper > nav {
+     grid-column: span 2;
+ }
+}
+
+/* Creating Rothko Painting -- ORANGE & RED */
+
+// VARIABLES -- Using Variables for colors below
+// NESTING -- Putting all colors id inside the content class
+.content {
+    #yellow {
+      background-color: $yellow-color;
+      // Using Math for the width
+      width: 310px + $updated-width; //320px
+      // FUNCTION -- Using "Round" function for rounding the height value of Rothko Painting
+      height: round(187.4px - $updated-height); // 167.4px but after "Round" function it returns to 167px!
+      box-shadow: 0 0 8px 3px rgb(219 103 2) inset; 
+      margin-left:1.2rem;
+      margin-top:-27.8rem;
+      margin-bottom:.4rem
+    }
+
+    #Background {
+      background-color: $main-color;
+      // MATH -- Using Math for the width
+      width: 370px - $updated-width; //360px
+      height: 462.2px;   
+    }
+
+    #red {
+      // FUNCTION -- Using "Darken" function to darkening the red color with a 2%
+      background-color: darken($red-color, $amount);
+      // MATH -- Using Math for the width
+      width: 3250px / $updated-width; //325px
+      height: 240.7px;
+      box-shadow: 0 0 6px 6px rgb(224.5 115 5) inset; margin-left:1.1rem;
+      margin-top:-15.7rem;
+      margin-bottom: 2rem;
+    }
+
+    #yellow2 {
+      // LOCAL VARIABLE -- Local Variable
+      $yellow-color-2: #e17305 !global;
+      background-color: $yellow-color-2;
+      // MATH -- Using Math for the width
+      width: 35px * $updated-width; //350px
+      height: 265.7px;
+      box-shadow: 0 0 8px 8px rgb(219 103 2) inset;
+      margin-left:.3rem;   
+    }
+}
+
+/* Painter Info Styling -- Orange & Red */
+
+// MIXIN -- Creating mixin in h1, h4 for color, font weight, family and style.
+@mixin painter-info {
+    color: black;
+    font-weight: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+h1, h4 {
+    @include painter-info;
+    background-color: $red-color;
+    font-family: 'Kreon', serif;    
+}
+
+h3, h5 {
+    background-color: $main-color;
+}
+
+
+/* Painter Info Styling Blue & Grey */
+
+// EXTEND -- I am extending Painting Orange & Red's h1 styling to the Blue & Grey's painting info
+q {
+    @extend h1;
+    background-color: #3464ca;
+}
+
+
+// IF/ELSE/ELSE IF STATEMENT
+header > h2 {
+  @if $rothko > 10 {
+    color:purple;
+   } @else if $rothko == 10 {
+    color:greenyellow;
+   } @else {
+      color: black;
+    }
+  }
+
+
+
+/* Navigation Part Styling */
+
+// NESTING -- I am making nesting for nav
+nav ul li  {
+    display: block;
+    text-decoration: none; 
+    padding: 20px; 
+    padding-left: 10px; 
+    border: thin groove  #f2f2f2; 
+    font-weight: bold;
+    background:rgb(9, 160, 102); 
+    color:#ffdb58;
+    font-family: 'Walter Turncoat', cursive;
+      
+    
+    // For DRY practicing purpose I am putting "&" for nav ul li
+    &:hover{
+    color: tomato;
+    transform: skewX(-15deg) scale(1.2);
+    border-color: #DD0000;
+    background:linear-gradient(to bottom, rgb(19, 255, 137) 0%, #1F1C18 100%);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+}
+
+li {
+    list-style: none;
+    margin:2px;
+    display:block;
+    border: solid 5px;   
+}
+
+
+@media (min-width: 700px) {
+	article {
+		background-color: rgb(150, 238, 9);
+	}
+}
+@media (min-width: 1000px) {
+	article {
+		background-color: rgb(207, 188, 77);
+	}
+}

@@ -1,0 +1,87 @@
+@import "variables";
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 150%;
+	display: grid;
+	grid-template-columns: repeat(3, 30%);
+	grid-gap: 1rem;
+	justify-content: center;
+}
+
+p {
+	text-align: center;
+}
+
+.main-color {
+	background-color: $main-color;
+}
+.complementary-color {
+	background-color: $complementary-color;
+}
+.analogous-color {
+	background-color: $analogous-color;
+}
+// .complementary-analogous {
+// 	background-color: $complementary-analogous;
+// }
+// // Complementary Neutrals, highlight, midtone, shadow
+// .complementary-neutral {
+// 	background-color: $complementary-neutral;
+// }
+// .complementary-neutral-light {
+// 	background-color: $complementary-neutral-light;
+// }
+// .complementary-neutral-dark {
+// 	background-color: $complementary-neutral-dark;
+// }
+
+// // Primary neutrals, highlight, midtone, shadow`
+// .primary-neutral {
+// 	background-color: $primary-neutral;
+// }
+// .primary-neutral-light {
+// 	background-color: $primary-neutral-light;
+// }
+// .primary-neutral-dark {
+// 	background-color: $primary-neutral-dark;
+// }
+
+// // Primary tint and shade
+// .primary-light {
+// 	background-color: $primary-light;
+// }
+// .primary-dark {
+// 	background-color: $primary-dark;
+// }
+// .complementary-light {
+// 	background-color: $complementary-light;
+// }
+
+// // Pure neutrals, highlight, midtone, shadow
+// .white {
+// 	background-color: $white;
+// 	color: $black;
+// }
+// .neutral-gray {
+// 	background-color: $neutral-gray;
+// }
+// .primary-gray {
+// 	background-color: $primary-gray;
+// }
+// .complementary-gray {
+// 	background-color: $complementary-gray;
+// }
+// .black {
+// 	background-color: $black;
+// 	color: $white;
+// }
+
+
+// Analogous Colors
+.analogous-color {
+	background-color: $analogous-color;
+}
+// .complementary-analogous {
+// 	background-color: $complementary-analogous;
+// }

@@ -1,0 +1,69 @@
+
+// Declaring variables for Rothko Painting --  ORANGE & RED
+$red-color: #de420a;
+$yellow-color: #fab205;
+$main-color: #db6702;
+
+// // Declaring variables for Rothko Painting --  BLUE & GREY
+// $dark-grey: #3b3d42;
+// $dirty-white: #d4d6db;
+// $navyish: #091942;
+
+// Declaring a variable for darken function's percentage argument
+$amount: 2%;
+
+//Declaring a variable for header to create if/else statement
+$rothko: 5;
+
+// Using Math for the width of Rothko Painting
+$updated-width: 10;
+
+// Using Math for the height of Rothko Painting
+$updated-height: 20;
+
+/* Creating Rothko Painting -- ORANGE & RED */
+
+// VARIABLES -- Using Variables for colors below
+// NESTING -- Putting all colors id inside the content class
+.content {
+    #yellow {
+      background-color: $yellow-color;
+      // Using Math for the width
+      width: 310px + $updated-width; //320px
+      // FUNCTION -- Using "Round" function for rounding the height value of Rothko Painting
+      height: round(187.4px - $updated-height); // 167.4px but after "Round" function it returns to 167px!
+      box-shadow: 0 0 8px 3px rgb(219 103 2) inset; 
+      margin-left:1.2rem;
+      margin-top:-27.8rem;
+      margin-bottom:.4rem
+    }
+
+    #Background {
+      background-color: $main-color;
+      // MATH -- Using Math for the width
+      width: 370px - $updated-width; //360px
+      height: 462.2px;   
+    }
+
+    #red {
+      // FUNCTION -- Using "Darken" function to darkening the red color with a 2%
+      background-color: darken($red-color, $amount);
+      // MATH -- Using Math for the width
+      width: 3250px / $updated-width; //325px
+      height: 240.7px;
+      box-shadow: 0 0 6px 6px rgb(224.5 115 5) inset; margin-left:1.1rem;
+      margin-top:-15.7rem;
+      margin-bottom: 2rem;
+    }
+
+    #yellow2 {
+      // LOCAL VARIABLE -- Local Variable
+      $yellow-color-2: #e17305 !global;
+      background-color: $yellow-color-2;
+      // MATH -- Using Math for the width
+      width: 35px * $updated-width; //350px
+      height: 265.7px;
+      box-shadow: 0 0 8px 8px rgb(219 103 2) inset;
+      margin-left:.3rem;   
+    }
+}
