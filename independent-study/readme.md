@@ -14,20 +14,20 @@ Why companies are choosing Vue framework
 Pros and cons of Vue
 
 ## Dynamics and main specifications of React
-Definition of React
-Basic syntax info
-Performance comparison data
-How easy or difficult to learn
-Why companies are choosing React framework
-Pros and cons of React
+- Definition of React
+- Basic syntax info
+- Performance comparison data
+- How easy or difficult to learn
+- Why companies are choosing React framework
+- Pros and cons of React
 
 ## Dynamics and main specifications of Angular
-Definition of Angular
-Basic syntax info
-Performance comparison data
-How easy or difficult to learn
-Why companies are choosing Angular framework
-Pros and cons of Angular
+- Definition of Angular
+- Basic syntax info
+- Performance comparison data
+- How easy or difficult to learn
+- Why companies are choosing Angular framework
+- Pros and cons of Angular
 
 ## Final section - Which is better and why? -  Which one will become more popular in industry and why?
 I will write my own thoughts and ideas after working more on above subjects.
