@@ -6,12 +6,12 @@ How popular are they
 Effects of their usage in job market
 
 ## Dynamics and main specifications of Vue
-Definition of Vue
-Basic syntax info
-Performance comparison data
-How easy or difficult to learn
-Why companies are choosing Vue framework
-Pros and cons of Vue
+- Definition of Vue
+- Basic syntax info
+- Performance comparison data
+- How easy or difficult to learn
+- Why companies are choosing Vue framework
+- Pros and cons of Vue
 
 ## Dynamics and main specifications of React
 - Definition of React
