@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <title>Week 6 Examples</title>
+    <meta charset='utf-8'>
+    <link href=data:, rel=icon>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+
+    <script src='script.js' defer></script>
+
+    <style>
+        [v-cloak] {
+            display: none
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script type='text/x-template' id='round-detail'>
+        <div v-if='!deleted'>
+            <ul>
+                <li>Round #: {{ number }}</li>
+                <li>Winner: {{ winner }}</li>
+                <li><slot name='coin'></slot></li>
+                <li><slot name='choice'></slot></li>
+            </ul>
+            <button @click='$emit("delete-round", number)'>Delete round</button>
+        </div>
+    </script>
+
+
+
+    <h1>Week 6 Examples</h1>
+
+    <div id='app' v-cloak>
+        <round-detail v-for='round in rounds' v-bind:key='round.number' v-bind:number='round.number'
+            v-bind:winner='round.winner' v-on:delete-round='deleteRound($event)'>
+
+            <template v-slot:coin>The coin landed on {{ round.coin }}</template>
+            <template v-slot:choice>The player chose {{ round.choice }}</template>
+        </round-detail>
+    </div>
+
+</body>
+
+</html>
