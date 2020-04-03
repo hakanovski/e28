@@ -35,6 +35,6 @@ export default {
 
 <style>
 ul {
-    border: 3px solid red;
+    border: 3px solid orange;
 }
 </style>

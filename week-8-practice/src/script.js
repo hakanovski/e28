@@ -5,7 +5,7 @@ let app = new Vue({
     el: '#app',
     data: {
         rounds: [
-            { number: 1, winner: 'Player', coin: 'heads', choice: 'heads' },
+            { number: 1, winner: 'Computer', coin: 'heads', choice: 'heads' },
             { number: 2, winner: 'Player', coin: 'tails', choice: 'tails' },
             { number: 3, winner: 'Computer', coin: 'heads', choice: 'tails' },
         ]
