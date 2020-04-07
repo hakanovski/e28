@@ -1,0 +1,155 @@
+/* box sizing: http://www.paulirish.com/2012/box-sizing-border-box-ftw */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* http://snook.ca/archives/html_and_css/font-size-with-rem */
+  color: #111;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Have the scroll bars always on so there's not a shift in the layout
+  when going from a non-scrolling page to a scrolling-page */
+  overflow-y: scroll;
+}
+
+body {
+  /* Default font-size */
+  font-size: 1.6rem;
+  /* sticky footer - match footer height */
+  margin-bottom: 60px;
+}
+
+/*----------------------------------------------------
+VARIABLES
+-----------------------------------------------------*/
+/* https: //clrs.cc/ */
+/*----------------------------------------------------
+GENERAL PAGE LAYOUT/DESIGN
+-----------------------------------------------------*/
+#app {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#logo {
+  /* Actual width is 636; displaying at half-size for retina screens */
+  width: 318px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:active,
+nav ul li a:hover {
+  text-transform: capitalize;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  color: #0074D9;
+}
+nav ul li a:hover {
+  background-color: #0074D9;
+  color: white;
+  text-decoration: none;
+}
+nav ul li a.router-link-active:link,
+nav ul li a.router-link-active:visited,
+nav ul li a.router-link-active:active,
+nav ul li a.router-link-active:hover {
+  text-decoration: none;
+  color: #111111;
+  background-color: white;
+  cursor: inherit;
+}
+
+/*----------------------------------------------------
+PAGE SPECIFIC
+-----------------------------------------------------*/
+#products .product {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding: 20px;
+}
+#products .product .product-name {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 5px 0 10px 0;
+}
+#products .product .product-thumb {
+  width: 200px;
+}
+#products .product .product-description {
+  width: 75%;
+  margin: auto;
+  text-align: left;
+  font-style: italic;
+}
+#products .product .product-price {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#featured {
+  background-color: #b2e9ff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#product-page img {
+  width: 200px;
+}
+#product-page .description {
+  font-size: 2rem;
+}
+#product-page .price {
+  font-size: 2rem;
+}
+#product-page button {
+  display: block;
+  margin: 10px auto;
+  font-size: 2rem;
+}
+
+/*----------------------------------------------------
+MISC
+-----------------------------------------------------*/
+.cleanList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.alert {
+  background-color: #2ECC40;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

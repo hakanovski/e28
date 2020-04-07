@@ -1,0 +1,202 @@
+/* box sizing: http://www.paulirish.com/2012/box-sizing-border-box-ftw */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* http://snook.ca/archives/html_and_css/font-size-with-rem */
+    color: #111;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Have the scroll bars always on so there's not a shift in the layout
+    when going from a non-scrolling page to a scrolling-page */
+    overflow-y: scroll;
+}
+
+body {
+    
+    /* Default font-size */
+    font-size: 1.6rem;
+
+    /* sticky footer - match footer height */
+    margin-bottom: 60px;
+}
+
+
+/*----------------------------------------------------
+VARIABLES
+-----------------------------------------------------*/
+$radius:5px;
+
+/* https: //clrs.cc/ */
+$aqua: #7FDBFF;
+$blue: #0074D9;
+$navy: #001F3F;
+$teal: #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime: #01FF70;
+
+$yellow: #FFDC00;
+$orange: #FF851B;
+$red: #FF4136;
+$fuchsia: #F012BE;
+$purple: #B10DC9;
+$maroon: #85144B;
+
+$white: #FFFFFF;
+$silver: #DDDDDD;
+$gray: #AAAAAA;
+$black: #111111;
+
+/*----------------------------------------------------
+GENERAL PAGE LAYOUT/DESIGN
+-----------------------------------------------------*/
+#app {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#logo {
+    /* Actual width is 636; displaying at half-size for retina screens */
+    width: 318px;
+}
+
+nav ul {
+    list-style-type: none;
+
+    li {
+        display: inline-block;
+
+        a:link,
+        a:visited,
+        a:active,
+        a:hover {
+            text-transform: capitalize;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+            color: $blue;
+        }
+
+        a:hover {
+            background-color: $blue;
+            color: white;
+            text-decoration: none;
+        }
+
+        a.router-link-active:link,
+        a.router-link-active:visited,
+        a.router-link-active:active,
+        a.router-link-active:hover {
+            text-decoration: none;
+            color: $black;
+            background-color: white;
+            cursor: inherit;
+        }
+    }
+}
+
+
+/*----------------------------------------------------
+PAGE SPECIFIC
+-----------------------------------------------------*/
+#products {
+    .product {
+        width: 75%;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        padding: 20px;
+
+        .product-name {
+            font-weight: bold;
+            font-size: 2.0rem;
+            margin: 5px 0 10px 0;
+        }
+
+        .product-thumb {
+            width: 200px;
+        }
+
+        .product-description {
+            width: 75%;
+            margin: auto;
+            text-align: left;
+            font-style: italic;
+        }
+
+        .product-price {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 2.0rem;
+        }
+    }
+}
+
+#featured {
+    background-color: lighten($aqua, 10%);
+    border-radius: $radius;
+    padding: 10px;
+}
+
+#product-page {
+    img {
+        width: 200px;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+
+    button {
+        display: block;
+        margin: 10px auto;
+        font-size: 2rem;
+    }
+}
+
+/*----------------------------------------------------
+MISC
+-----------------------------------------------------*/
+.cleanList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.alert {
+    background-color: $green;
+    color: white;
+    border-radius: $radius;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+    {
+    opacity: 0;
+}
