@@ -23,6 +23,7 @@ I am pulling the Car features and acceleration data from - https://my-json-serve
 - http://ferrariusa.com
 - https://www.guideautoweb.com/en/makes/ferrari/488/2019/specifications/gtb/
 - For more routing info: https://fatihacet.com/vuejs-videolari/
+-  For logo creation: https://www.tailorbrands.com/
 
 ## Notes for instructor
 First I was preparing a recipe site with different Turkish foods but after that I decided to create a page for my cars.
