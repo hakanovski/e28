@@ -10,8 +10,8 @@ $nav-default-item-hover-color: $button-primary-hover-background;
 $button-font-size: 15px;
 
 // 2. Import default variables and available mixins.
-@import "../assignment_3/uikit site/src/scss/variables-theme.scss";
-@import "../assignment_3/uikit site/src/scss/mixins-theme.scss";
+@import "../assignment-3/uikit site/src/scss/variables-theme.scss";
+@import "../assignment-3/uikit site/src/scss/mixins-theme.scss";
 
 
 // 3. Your custom mixin overwrites.
@@ -23,7 +23,7 @@ $button-font-size: 15px;
 }
 
 // 4. Import UIkit.
-@import "../assignment_3/uikit site/src/scss/uikit-theme.scss";
+@import "../assignment-3/uikit site/src/scss/uikit-theme.scss";
 
 // 5. Hakan's custom CSS
 
