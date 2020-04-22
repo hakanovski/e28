@@ -1,0 +1,59 @@
+// 1. Your custom variables and variable overwrites.
+$global-primary-background: rgb(231, 182, 172);
+$global-secondary-background: rgb(75, 183, 255);
+$offcanvas-bar-background: $global-primary-background;
+$background-color: #bc002d;
+$button-primary-background:  $global-primary-background;
+$button-primary-hover-background: #bc002d;
+$button-primary-hover-color: $global-primary-background;
+$nav-default-item-hover-color: $button-primary-hover-background;
+$button-font-size: 15px;
+
+// 2. Import default variables and available mixins.
+@import "../assignment_3/uikit site/src/scss/variables-theme.scss";
+@import "../assignment_3/uikit site/src/scss/mixins-theme.scss";
+
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+@mixin hook-navbar(){ padding:1em 0;}
+@mixin hook-button-font-size { 
+   font-family: 'Bangers', cursive;
+   font-size: $button-font-size;
+}
+
+// 4. Import UIkit.
+@import "../assignment_3/uikit site/src/scss/uikit-theme.scss";
+
+// 5. Hakan's custom CSS
+
+body {
+    background-color: $background-color;
+}
+footer{
+    background-color: $global-primary-background;
+    color: $global-inverse-color;
+    text-align: center;
+}
+
+button{
+    background-color: $global-primary-background;
+    padding-right: 10px;
+    
+
+}
+
+button:hover {
+    background-color: $button-primary-hover-background;
+    color: $global-primary-background;
+    
+}
+
+footer a:hover {
+    background-color: $global-secondary-background;
+
+}
+
+ul li:hover {
+    background-color: $global-primary-background;
+}
