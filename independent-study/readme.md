@@ -18,7 +18,7 @@ However tech industry is still looking for more React and Angular developers. Vu
 
 According to the Indeed.com, current open positions over 60.000 jobs mainly require React knowledge. After that Angular and only 0.8% for Vue.
 
-
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/1.png)
 
 ## DYNAMICS & MAIN CAHARACTERISTICS OF VUE
 After comparing the syntax and the functionality of Vue with the other 2 frameworks, Vue is more liberated by it means it has more customizability and flexibility. While I was working on my components in projects, almost every time I can reflect my ideas easily by using the components. I can combine both behavior of the website and UI at the same time by working enough on components. In my last project Vue allows me to use pre processors, which is a great option for developers. I used Babel and in future I want to use Sass with Vue for design specific purposes rather than CSS. Plus I think it is easier to learn about directives and components when comparing with the other two.
