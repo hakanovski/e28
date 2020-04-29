@@ -16,9 +16,12 @@ All these 3 main frameworks have been adopted heavily by different industries fo
 
 However tech industry is still looking for more React and Angular developers. Vue is gaining a lot of popularity in the last 3 years. Below graph is from back in late 2018.
 
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/1.png)
+
 According to the Indeed.com, current open positions over 60.000 jobs mainly require React knowledge. After that Angular and only 0.8% for Vue.
 
-![](https://github.com/hakanovski/e28/blob/master/independent-study/images/1.png)
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/2.png)
+
 
 ## DYNAMICS & MAIN CAHARACTERISTICS OF VUE
 After comparing the syntax and the functionality of Vue with the other 2 frameworks, Vue is more liberated by it means it has more customizability and flexibility. While I was working on my components in projects, almost every time I can reflect my ideas easily by using the components. I can combine both behavior of the website and UI at the same time by working enough on components. In my last project Vue allows me to use pre processors, which is a great option for developers. I used Babel and in future I want to use Sass with Vue for design specific purposes rather than CSS. Plus I think it is easier to learn about directives and components when comparing with the other two.
@@ -27,7 +30,11 @@ Vue’s community is also very big and almost every time Vue’s main site helps
 
 ## React’s Two Way Binding:
 
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/3.png)
+
 ## Vue’s Two Way Binding:
+
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/4.png)
 
 Currently the main problem of Vue is not as much popular as React or Angular because it is the newest framework but companies are gradually passing to this technology. For example Laravel community has mentioned many times Vue is one of their preferred frameworks.  In future if companies want to migrate from Angular or React to Vue, I think, there will be more solution created more widely especially for big projects migration. Today Alibaba, EuroNews, Adobe, Behance, Gitlab and Reuters are using Vue.
 
@@ -39,7 +46,11 @@ For example, let’s focus on HelloWorld example for both frameworks.
 
 ## REACT:
 
-## VUE
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/5.png)
+
+## VUE:
+
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/6.png)
 
 ## DYNAMICS & MAIN CAHARACTERISTICS OF ANGULAR
 
@@ -51,11 +62,18 @@ Learning Angular is more difficult than the others and it requires more time. In
 
 I checked the main templates and event requests over Angular’s website and here is the example for delete request:
 
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/7.png)
+
 Here is another example for User list component uses the @Input property.
 
-## Same thing in Vue:
+## Angular:
+
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/8.png)
 
 
+## Vue:
+
+![](https://github.com/hakanovski/e28/blob/master/independent-study/images/9.png)
 
 
 ## FINAL DECISION
