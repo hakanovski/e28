@@ -18,21 +18,19 @@
 
 <script>
 import * as app from './app.js';
+
+
 export default {
   name: 'app',
   components: {},
   data: function() {
     return {
-      links: ['Home', 'Cars', 'Favorites'],
-      paths: {
-         home: '/', 
-         cars: '/cars',
-         favorites: '/favorites'
-      }
+      links: ['Home', 'Cars', 'Favorites', 'Dream Cars'],
     };
   },
   mounted() {
     this.favorites = new app.favorites();
+    this.$store.dispatch('setDreams');
   }
 };
 </script>

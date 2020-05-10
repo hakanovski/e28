@@ -1,14 +1,3 @@
-<template>
-  <div class='car'>
-    <router-link :to='{ name: "car", params: { id: car.id }}'>
-      <div class='car-name'>{{ car.name }}</div>
-      <img
-        class='car-thumb'
-        :src='"./../assets/images/cars/" + car.id + ".jpg"'
-      />
-    </router-link>
-  </div>
-</template>
 
 <script>
 export default {
@@ -16,5 +5,20 @@ export default {
   props: ['car']
 };
 </script>
+
+<template>
+  <div class='car'>
+    <router-link data-test='car-link' :to='{ name: "car", params: { id: car.id }}'>
+      <div data-test='car-name' class='car-name'>{{ car.name }}</div>
+      <img
+        class='car-thumb'
+        :alt='"Car Image"'
+        :src='"./../assets/images/cars/" + car.id + ".jpg"'
+      />
+    </router-link>
+  </div>
+</template>
+
+
 
 
