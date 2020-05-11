@@ -131,26 +131,30 @@ h1, h2 {
     margin: auto;
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px 0;
-    font-weight: bold;
-    padding-top: 20px;
-}
-
-.form-help {
-    display: block;
-    color: gray;
-}
-
 input, textarea {
-    margin: 8px 0;
     box-sizing: border-box;
-    padding-bottom: 20px;
-    width: 30%;
-    vertical-align: middle;
-    position: relative;
-    bottom: 1px;
-    text-align: center
+    width: 35%;
+    height: 30px;
+    padding-bottom: 5px;
+    vertical-align: middle; 
+    border: 3px solid red;
+    text-align: center;
+    margin: 10px;
   }
 
+label {
+    display: block;
+    margin: 10px 0 20px 0;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.entry-error{
+    font-family: 'MedievalSharp', cursive;
+    color: rgb(86, 129, 12);
+}
+
+.warning {
+    display: block;
+    color: red;
+}

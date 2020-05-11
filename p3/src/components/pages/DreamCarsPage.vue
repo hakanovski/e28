@@ -6,63 +6,57 @@
         <label for='name'>BRAND</label>
         <input
           type='text'
-          :class='{ "form-input-error": $v.cars.slug.$error }'
-          id='slug'
-          data-test='cars-slug-input'
+          :class='{ "user-error": $v.cars.slug.$error }'
           v-model='$v.cars.slug.$model'
         />
-
         <div v-if='$v.cars.slug.$error'>
-          <div class='form-feedback-error' v-if='!$v.cars.slug.required'>Please enter a proper car brand name</div>
+          <div class='entry-error' v-if='!$v.cars.slug.required'>Please enter a proper car brand name</div>
           <div
-            class='form-feedback-error'
+            class='entry-error'
             v-else-if='!$v.cars.slug.minLength'
           >Please enter more than at least 2 characters for car brand name</div>
-
           <div
-            class='form-feedback-error'
+            class='entry-error'
             v-else-if='!$v.cars.slug.doesNotExist'
           >This is not a proper car brand name</div>
         </div>
-
-        <small class='form-help'>Min: 2</small>
+        <p class='warning'>Min: 2 Characters Entry</p>
       </div>
-
       <div class='form-group'>
         <label for='name'>MODEL</label>
         <input
           type='text'
-          :class='{ "form-input-error": $v.cars.name.$error }'
-          data-test='cars-name-input'
-          id='name'
+          :class='{ "user-error": $v.cars.name.$error }'
           v-model='$v.cars.name.$model'
         />
         <div v-if='$v.cars.name.$error'>
-          <div class='form-feedback-error' v-if='!$v.cars.name.required'>Please enter a proper car model name</div>
+          <div class='entry-error' v-if='!$v.cars.name.required'>Please enter a proper car model name</div>
         </div>
       </div>
 
       <div class='form-group'>
-        <label for='ingredients'>YEAR</label>
+        <label for='year'>YEAR</label>
         <textarea
-          data-test='cars-ingredients-textarea'
-          id='ingredients'
-          v-model='cars.ingredients'
+          v-model='cars.year'
         ></textarea>
       </div>
 
       <div class='form-group'>
-        <label for='instructions'>SPECS</label>
+        <label for='instructions'>Cylinders
+
+          <select id="cyl" name="cyl">
+            <option value="V6">V6</option>
+            <option value="V8">V8</option>
+            <option value="V12">V12</option>
+          </select>
+        </label>
+        
         <textarea
-          data-test='cars-instructions-textarea'
-          id='instructions'
           v-model='cars.instructions'
         ></textarea>
       </div>
-
-      <button data-test='add-cars-button' type='submit'>Add Your Dream Car</button>
-
-      <div class='form-feedback-error' v-if='formHasErrors'>Please correct correct your errors before adding your dream car.</div>
+      <button type='submit'>Add Your Dream Car</button>
+      <div class='entry-error' v-if='formHasErrors'>Please correct correct your errors before adding your dream car.</div>
     </form>
   </div>
 </template>
@@ -76,14 +70,14 @@ if (process.env.NODE_ENV == 'development') {
   cars = {
     slug: 'Koenigsegg',
     name: 'Jesko',
-    ingredients: '2020',
-    instructions: 'V12'
+    year: '2020',
+    instructions: 'Any specific interior or exterior options?'
   };
 } else {
   cars = {
     slug: '',
     name: '',
-    ingredients: '',
+    year: '',
     instructions: ''
   };
 }

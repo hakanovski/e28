@@ -10,7 +10,7 @@
     <p class='acceleration'>0 to 60 mph: {{ car.acceleration }}</p>
     <p class='features'>Features: {{ car.features }}</p>
 
-    <button @click='addToFavorites(car.id)'>Add to Favorites</button>
+    <button data-test='button-test' @click='addToFavorites(car.id)'>Add to Favorites</button>
   </div>
 </template>
 

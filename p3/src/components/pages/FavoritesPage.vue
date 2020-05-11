@@ -6,7 +6,7 @@
 
     <ul v-else-if='cars.length > 0'>
       <li v-for='item in items' :key='item.id'>
-        <button @click='removeFromFavorites(item.id)'>Remove</button>
+        <button data-test='remove-test' @click='removeFromFavorites(item.id)'>Remove</button>
         {{ getCarFeatures(item.id)["name"] }}
       </li>
     </ul>
