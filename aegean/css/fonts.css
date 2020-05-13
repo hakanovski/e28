@@ -1,0 +1,38 @@
+/* VARIABLES */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Mystery Quest", cursive;
+  font-weight: 300;
+}
+
+body {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+}
+
+a {
+  font-family: "GFS Neohellenic", sans-serif;
+  font-weight: 600;
+  color: #40E0D0;
+}
+
+:root {
+  --initial-font: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --initial-font: calc(1em / 1.125);
+  }
+}
+@media (max-width: 320px) {
+  :root {
+    --initial-font: calc(1em / calc(1.125 * 1.125));
+  }
+}
+h1 {
+  color: #3d3d3d;
+}
+
+h2 {
+  color: #4d4b4b;
+}

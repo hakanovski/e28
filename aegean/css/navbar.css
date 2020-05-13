@@ -1,0 +1,94 @@
+/* VARIABLES */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo, .nav-item {
+  display: flex;
+  flex-basis: 20%;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-logo .nav-img, .nav-item .nav-img {
+  width: auto;
+  max-height: 65%;
+}
+
+.nav-item {
+  flex-basis: 80%;
+  padding: 0;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-item ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+.nav-item ul li {
+  display: inline-flex;
+}
+.nav-item ul li a {
+  text-decoration: none;
+  color: #40E0D0;
+  font-family: "GFS Neohellenic", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1.4px;
+  margin: 0;
+  font-weight: 400;
+}
+.nav-item ul li a:hover {
+  color: #ece73a;
+}
+
+.nav-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.nav-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar .nav-item, .navbar .navbar-logo {
+    height: auto;
+    flex-basis: 100%;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .navbar ul {
+    align-items: center;
+    justify-content: center;
+    margin: 0.9rem 0;
+  }
+  .navbar .navbar-logo {
+    height: 3.5rem;
+    align-items: center;
+  }
+  .navbar .navbar-logo .nav-img {
+    width: auto;
+    max-height: 70%;
+  }
+}

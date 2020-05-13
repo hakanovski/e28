@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+
+//TEXT ALIGNMENT
+
+.align-to-left {
+text-align: left;
+}
+
+.align-to-right {
+  text-align: right;
+}
+
+.align-to-center {
+  text-align: center;
+}
+
+@each $size, $breakpoint in $breakpoints {
+  @media (min-width: #{$size}) {
+      .align-to-left-#{$breakpoint} {
+        text-align: left;
+       }
+      .align-to-right-#{$breakpoint} {
+        text-align: right;
+       }
+      .align-to-center-#{$breakpoint} {
+        text-align: center;
+       }
+  }
+}
+
+
+// Position for main alignment for main elements
+p, h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}

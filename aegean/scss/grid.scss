@@ -1,0 +1,110 @@
+@import 'variables.scss';
+
+/* Border Box Model */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+// Grid System
+
+@for $i from 0 through $totalcolumns{
+  .col-span-#{$i}{
+    flex: 0 0 100% / $totalcolumns * $i;
+  }
+  .col-offset-#{$i}{
+    margin-left: 100% / $totalcolumns * $i;
+  }
+}
+
+
+
+// Width of the Grids
+// https://sass-lang.com/documentation/values/maps
+
+@function auto-shape-wide($i) {
+  @return calculation($i / $totalcolumns);
+}
+
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}) {
+    @for $i from 1 through $totalcolumns {
+      .col-#{$i}-#{$breakpoint} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: auto-shape-wide($i);
+        padding: $padding-sm;
+        }
+      }
+  }
+}
+
+
+
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  background: #76844e;
+  width:calc(100% - 5rem);
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+div[class*="col-"]{
+  background: #00c3d2;
+  border: 2px solid green;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+// CONTAINER, SECTIONS WIDTHS AND HEIGHTS
+.container {
+  width: 100%;
+  padding: $padding-lg 0s;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.container-sm, .container-md, .container-lg, .container-xl {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Height of the Containers
+.container-sm {
+    padding: calc(#{$padding-lg} + 0.8rem) 0rem;
+}
+.container-med {
+  padding: calc(#{$padding-lg} + 1.8rem) 0rem;
+}
+.container-lg {
+  padding: calc(#{$padding-lg} + 5.8rem) 0rem;
+}
+.container-xl {
+    padding: calc(#{$padding-lg} + 7.8rem) 0rem;
+}

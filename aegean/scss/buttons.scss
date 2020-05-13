@@ -1,0 +1,154 @@
+@import 'variables.scss';
+
+
+// BUTTON TYPES & COLORS & SIZES ---> RECTENAGLE & PILL
+// RECTANGLE
+.rect-button-1 {
+  background-color: $button-main-colour;
+  border: none;
+  color: $button-text-lighter;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: $font-second-type;
+}
+
+.rect-button-1:hover {
+  background-color: $button-hover-main-color;
+}
+
+
+.rect-button-2 {
+  background-color: $button-second-colour;
+  border: none;
+  color: $button-text-lighter;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: $font-second-type;
+}
+
+.rect-button-2:hover {
+  background-color: $button-hover-second-color;
+}
+
+.rect-button-3 {
+  background-color: $button-third-colour;
+  border: none;
+  color: $button-text-darker;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: $font-second-type;
+}
+
+.rect-button-3:hover {
+  background-color: $button-hover-third-color;
+}
+
+
+.rect-button-4 {
+  background-color: $button-fourth-colour;
+  border: none;
+  color: $button-text-darker;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: $font-second-type;
+}
+
+.rect-button-4:hover {
+  background-color: $button-hover-fourth-color;
+}
+
+
+// PILL
+.pill-button-1 {
+  background-color: $button-main-colour;
+  border: none;
+  color: $button-text-lighter;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: $font-second-type;
+}
+
+.pill-button-1:hover {
+  background-color: $button-hover-main-color;
+}
+
+.pill-button-2 {
+  background-color: $button-second-colour;
+  border: none;
+  color: $button-text-lighter;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: $font-second-type;
+}
+
+.pill-button-2:hover {
+  background-color: $button-hover-second-color;
+}
+
+.pill-button-3 {
+  background-color: $button-third-colour;
+  border: none;
+  color: $button-text-darker;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: $font-second-type;
+}
+
+.pill-button-3:hover {
+  background-color: $button-hover-third-color;
+}
+
+.pill-button-4 {
+  background-color: $button-fourth-colour;
+  border: none;
+  color: $button-text-darker;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: $font-second-type;
+}
+
+.pill-button-4:hover {
+  background-color: $button-hover-fourth-color;
+}
+
+

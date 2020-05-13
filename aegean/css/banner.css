@@ -1,0 +1,25 @@
+/* VARIABLES */
+.banner {
+  height: calc(1480px - 3.5rem);
+  padding: 0rem;
+  flex-direction: column;
+}
+.banner [class*=col-] {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.banner p, .banner h1 {
+  width: 100%;
+  color: #f0ecec;
+}
+
+.banner-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #40E0D0;
+}

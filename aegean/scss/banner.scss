@@ -1,0 +1,29 @@
+@import 'variables.scss';
+
+.banner {
+  height: calc(1480px - #{$height-lg});
+  padding: 0rem;
+  flex-direction: column;
+
+  [class*="col-"] {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  p, h1 {
+    width: 100%;
+    color: $santorini-white;
+   
+  }
+}
+
+.banner-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $zeus-lightning;
+}

@@ -1,0 +1,132 @@
+
+/* VARIABLES */
+
+// GRID COLUMNS
+$totalcolumns: 6;
+
+
+// BREAKPOINTS
+$breakpoints: (
+  sm: 320px, 
+  md: 480px, 
+  lg: 960px,
+  xl: 1200px
+  //Your custom breakpoints
+);
+
+
+// SIZES
+$sizes: (
+  xs: 0.18rem,
+  small: 0.8rem,
+  medium: 1.2rem,
+  large: 1.8rem,
+  xl: 2.5rem
+);
+
+
+// PADDING & OTHER SIZES & HEIGHTS
+// https://sass-lang.com/documentation/modules/map
+$padding-sm: map-get($sizes, sm);
+$padding-md: map-get($sizes, md);
+$padding-lg: map-get($sizes, lg);
+$padding-xl: map-get($sizes, xl);
+
+// MARGINS
+$margin-sm: $padding-sm;
+$margin-md: $padding-md;
+$margin-lg: $padding-lg;
+$margin-xl: $padding-xl;
+
+// LINE HEIGHTS
+$line-height: 1.3em;
+$more-line-height: calc(#{$line-height} + 1.8em);
+
+// CONTAINER HEIGHTS
+$height-sm: 1.2rem;
+$height-md: 2.2rem;
+$height-lg: 3.5rem;
+$height-xl: 5rem;
+
+
+
+// COLORS
+$zeus-lightning: #40E0D0;
+$aegean-breeze: #c3e6d7;
+$olive-oil: #ece73a;
+$gaia-soil: #b4840d;
+$darkest-grey: rgb(77, 75, 75);
+$dark-grey: rgb(61, 61, 61);
+$normal-grey: rgb(128, 127, 127);
+$santorini-white: rgb(240, 236, 236);
+
+// TEXT COLORS
+$main-text-color: $dark-grey;
+$h1-text-color: $normal-grey;
+$h2-text-color: $darkest-grey;
+$link-text-color: $gaia-soil;
+
+// BACKGROUND COLORS
+$main-background: $santorini-white;
+$main-background-1: $zeus-lightning;
+$main-background-2: $aegean-breeze;
+
+
+
+// TEXT TYPE & FONTS & DESIGN
+$font-main-type: 'GFS Didot', serif;
+$font-second-type: 'GFS Neohellenic', sans-serif;
+$font-third-type: 'Mystery Quest', cursive;
+
+
+//Weights
+$font-super-weight: 600;
+$font-main-weight: 400;
+$font-secondary-weight: 300;
+$font-thirdly-weight: 250;
+
+// RESPONSIVE TYPE SCALING
+// Including the values from - https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54
+
+$modular-type-scale: (
+    perfect-fourth: 1.333,
+    major-second: 1.125,
+    augmented-fourth: 1.414,
+);
+
+
+
+
+// BUTTONS
+$button-main-colour: #00a770;
+$button-second-colour: #008ea7;
+$button-third-colour: #93a304;
+$button-fourth-colour: #967611;
+
+$button-hover-main-color: #22d89b;
+$button-hover-second-color: #63c9db;
+$button-hover-third-color: #c9d17d;
+$button-hover-fourth-color: #dbc786;
+
+$button-text-lighter: $santorini-white;
+$button-text-darker: $darkest-grey;
+
+
+// CARDS
+$card-default-bg: rgb(253, 241, 241);
+$card-primary-bg: #80b5dd;
+$card-other-bg:	#82ff9d;
+
+$card-padding: 0rem 1.3rem;
+$card-margin: 0 0 1.3rem 0;
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+$card-shadow: 0 2.5px 6.4px rgba(48, 42, 42, 0.253);
+$card-shadow-hover: 0 2.5px 6.4px rgba(48, 42, 42, 0.250);
+
+$card-padding-lg: 0rem 1.7rem;
+$card-padding-sm: 0rem 0.7rem;
+
+
+
+

@@ -1,0 +1,144 @@
+/* VARIABLES */
+.rect-button-1 {
+  background-color: #00a770;
+  border: none;
+  color: #f0ecec;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: "GFS Neohellenic", sans-serif;
+}
+
+.rect-button-1:hover {
+  background-color: #22d89b;
+}
+
+.rect-button-2 {
+  background-color: #008ea7;
+  border: none;
+  color: #f0ecec;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: "GFS Neohellenic", sans-serif;
+}
+
+.rect-button-2:hover {
+  background-color: #63c9db;
+}
+
+.rect-button-3 {
+  background-color: #93a304;
+  border: none;
+  color: #4d4b4b;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: "GFS Neohellenic", sans-serif;
+}
+
+.rect-button-3:hover {
+  background-color: #c9d17d;
+}
+
+.rect-button-4 {
+  background-color: #967611;
+  border: none;
+  color: #4d4b4b;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: "GFS Neohellenic", sans-serif;
+}
+
+.rect-button-4:hover {
+  background-color: #dbc786;
+}
+
+.pill-button-1 {
+  background-color: #00a770;
+  border: none;
+  color: #f0ecec;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: "GFS Neohellenic", sans-serif;
+}
+
+.pill-button-1:hover {
+  background-color: #22d89b;
+}
+
+.pill-button-2 {
+  background-color: #008ea7;
+  border: none;
+  color: #f0ecec;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: "GFS Neohellenic", sans-serif;
+}
+
+.pill-button-2:hover {
+  background-color: #63c9db;
+}
+
+.pill-button-3 {
+  background-color: #93a304;
+  border: none;
+  color: #4d4b4b;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: "GFS Neohellenic", sans-serif;
+}
+
+.pill-button-3:hover {
+  background-color: #c9d17d;
+}
+
+.pill-button-4 {
+  background-color: #967611;
+  border: none;
+  color: #4d4b4b;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: "GFS Neohellenic", sans-serif;
+}
+
+.pill-button-4:hover {
+  background-color: #dbc786;
+}

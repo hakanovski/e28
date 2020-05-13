@@ -1,0 +1,65 @@
+@import 'variables.scss';
+
+
+.card {
+  margin: $card-margin;
+  padding: $card-padding;
+  position: relative;
+}
+
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: unset;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-body {
+  padding: 4rem 1rem;
+  box-shadow: $card-shadow;
+}
+
+.card-default {
+  background: $card-default-bg;
+}
+
+.card-primary {
+  background: $card-primary-bg;
+}
+
+.card-other {
+  background: $card-other-bg;
+}
+
+.card-size-small > div {
+  padding: $card-padding-sm;
+}
+
+.card-size-large > div {
+  padding: $card-padding-lg;
+}
+
+
+//Media Queries and responsiveness
+
+@media (min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg)){
+  .card-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: map-get($breakpoints, sm)) and (max-width: map-get($breakpoints, md)){
+  .card-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: map-get($breakpoints, sm)) {
+  .card-container {
+    width: 100%;
+}
+}

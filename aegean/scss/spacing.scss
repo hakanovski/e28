@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+ @each $size in $sizes {
+    .padding-parallel-#{$size} {
+      padding-left: $sizing;
+      padding-right: $sizing;
+    }
+
+    .padding-up-and-down-#{$size} {
+        padding-top: $sizing;
+        padding-bottom: $sizing;
+    }
+}

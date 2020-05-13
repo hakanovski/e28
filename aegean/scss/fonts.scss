@@ -1,0 +1,59 @@
+@import 'variables.scss';
+
+
+// Styling, weight, type for main elements
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-third-type;
+  font-weight: $font-secondary-weight;
+}
+
+
+body {
+  font-family: $font-main-type;
+  font-weight: $font-main-weight;
+}
+a {
+  font-family: $font-second-type;
+  font-weight: $font-super-weight;
+  color: $zeus-lightning;
+
+}
+
+// Size
+
+//For the customization user can select the modular scale mentioned in modular type scaling part in Variables.scss
+$scale: perfect-fourth;
+
+//Now you can custom the initial size of the font, you can adjust the value.
+:root {
+--initial-font: 1.5rem;
+}
+
+
+// Media Query Font Sizes
+@media (max-width: map-get($breakpoints, md)) {
+  :root {
+  --initial-font: calc(1em / #{map-get($modular-type-scale, major-second)});
+  }
+}
+
+@media (max-width: map-get($breakpoints, sm)) {
+  :root {
+  --initial-font: calc(1em / calc(#{map-get($modular-type-scale, major-second)} * #{map-get($modular-type-scale, major-second)}));
+  }
+}
+
+
+// Font Colors
+$body-color: $normal-grey;
+$h1-color: $dark-grey;
+$h2-color: $darkest-grey;
+$link-color: $zeus-lightning;
+
+
+h1 {
+    color: $h1-color;
+}
+h2 {
+    color: $h2-color;
+}

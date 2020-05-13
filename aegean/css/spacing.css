@@ -1,0 +1,50 @@
+/* VARIABLES */
+.padding-parallel-xs {
+  padding-left: 0.18rem;
+  padding-right: 0.18rem;
+}
+
+.padding-up-and-down-xs {
+  padding-top: 0.18rem;
+  padding-bottom: 0.18rem;
+}
+
+.padding-parallel-small {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.padding-up-and-down-small {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.padding-parallel-medium {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.padding-up-and-down-medium {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.padding-parallel-large {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+
+.padding-up-and-down-large {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+.padding-parallel-xl {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.padding-up-and-down-xl {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
